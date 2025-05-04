@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Food menu website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: gainsboro;
+    }
+
+    .pic {
+        width: 4000px;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FOOD ! ARC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/About.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Contact us.html">Contact us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" >Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#LoginModal">Login</button>
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#SignUpModal">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login to FOOD ! ARC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address Or Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ExampleModalLabel">Sign Up on FOOD ! ARC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="bb.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Breakfast items</h5>
+                    <p>We have lots of delicious and healthy morning breakfast items for you .</p>
+
+                    <p><a class="btn btn-success btn-sm"
+                            href="https://food.ndtv.com/lists/breakfast-suggestions-top-10-veg-recipes-695195">VEG</a>
+                    </p>
+                    <p><a class="btn btn-danger btn-sm"
+                            href="https://b2dplate.com/category/non-veg-breakfast/">NON-VEG</a></p>
+                    <p><a class="btn btn-primary btn-sm" href="https://simplyfruits.com/menu/">FRUITS</a></p>
+
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/1000x250/?indian lunch" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Lunch items</h5>
+                    <p>To make your lunch awesome we have made lots of dishes in the lunch for you.</p>
+                    <p><a class="btn btn-success btn-sm"
+                            href="https://stateguesthouse.tripura.gov.in/sites/default/files/Mrnu-Chaart-with-rate.pdf">VEG</a>
+                    </p>
+
+                    <p><a class="btn btn-danger btn-sm"
+                            href="https://simpleindianrecipes.com/Specials/MenuIdeas/Non-Veg-Lunch-Ideas.aspx">NON-VEG</a>
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/1000x250/? dinner" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Dinner menu </h5>
+                    <p color="black">Its time to end your great day with a mind blowing and delicious dinner .</p>
+                    <p><a class="btn btn-success btn-sm"
+                            href="https://www.indianhealthyrecipes.com/recipes/veg-recipes/">VEG</a></p>
+                    <p><a class="btn btn-danger btn-sm"
+                            href="https://zeezest.com/food/7-best-non-vegetarian-dinner-recipes-zee-zest-2319">NON-VEG</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+
+
+   
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img rounded-circle" width="150" height="150" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" src="new.png" alt="">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+
+                <h2 class="fw-normal" >PARIS-BREAST PASTRY</h2>
+                <p>Memory of your mother
+                    rolling pastry
+                    and you watching
+
+                    her hands
+                    and the rolling pin
+                    and the way the pastry</p>
+                <p><a class="btn btn-outline-danger" href="https://www.seriouseats.com/paris-brest-pate-a-choux-with-praline-creme-mousseline">View
+                        details »</a></p>
+            </div>
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img  rounded-circle" width="160" height="150" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" src="cakes.png" alt="">
+                <title>GRA</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <h2 class="fw-normal">RED VELVET CAKE</h2>
+                <p>Red velvet cake is the queen of all layer cakes. The “I can’t quite put my finger on the flavor”
+                    cake..</p>
+                <p><a class="btn btn-outline-success" href="https://preppykitchen.com/best-red-velvet-cake/">View details »</a>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img  rounded-circle" width="160" height="150" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" src="mymuf.png" alt="">
+                <title>THE ENGLISH MUFFIN</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <h2 class="fw-normal">THE ENGLISH MUFFIN</h2>
+                <p>It took some convincing but after a year begging he gave me a chance so small I called it my muffin.
+                </p>
+                <p><a class="btn btn-outline-warning " href="https://www.allrecipes.com/recipe/6947/english-muffins/">View
+                        details »</a></p>
+            </div>
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img  rounded-circle" width="160" height="150" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" src="cup cake.png" alt="">
+                <title>THE ENGLISH MUFFIN</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <h2 class="fw-normal">CUP CAKE</h2>
+                <p>Cupcakes: because life's too short for mediocre treats.Life is short, eat the cupcake.
+                </p>
+                <p><a class="btn btn-outline-primary " href="https://www.tripadvisor.in/Restaurant_Review-g304554-d4101708-Reviews-Love_Sugar_Dough-Mumbai_Maharashtra.html">View
+                        details »</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Presenting the taste of India -<span
+                    class="text-body-secondary"> Chole bhature</span></h2>
+            <p class="lead">If you are indian then you know what the feelings we got while eating this delicious food if
+                you are not an indian we should recommend you to try this from our site you will be feeling grateful to
+                have this trust us. Chole bhature is a food dish popular in the Northern areas of the Indian
+                subcontinent.<a href="https://www.zomato.com/ncr/kwality-connaught-place-new-delhi">Click Here</a></p>
+        </div>
+        <div class="col-md-5">
+            <img src="cb.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500" height="500" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                fill="var(--bs-secondary-color)" dy=".3em"></text>
+
+        </div>
+    </div>
+
+
+
+    <div class="row featurette my-5">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary">Time for some traditional
+                    Tadka -
+                    Presenting Rajasthan's famous Dal-Bati & Churma.
+                </span></h2>
+            <p class="lead">A meal in Rajasthan is incomplete without these iconic dishes of Rajasthan. These consist of
+                "dal" (lentil curry), "baati" (wheat bread balls) and "churma" (sweet powdered cereal), served with a
+                red chilli on top of it, and spicy garlic chutney with dry fruits like cashew, pistachio, almonds or
+                raisins. <a href="https://www.zomato.com/jaipur/thali-and-more-c-scheme">Click Here</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="dalbati.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500" height="500" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>rajasthani</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                fill="var(--bs-secondary-color)" dy=".3em"></text>
+            </svg>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Now turning into bengal's famous -<span
+                    class="text-body-secondary"> Shukto</span></h2>
+            <p class="lead">Lets give a unforgetable delicious taste of bengal's famous Shukto. It is a complex dish having the proper mixture and balance of tastes and textures. It is a thick soupy mixture of vegetables in ginger mustard sauce called SHUKTO. Shukto is often a critical measure of a Bengalis cooking ability.<a href="https://bhojohorimanna.com/">Click Here</a></p>
+        </div>
+        <div class="col-md-5">
+            <img src="shukto1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500" height="500" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                fill="var(--bs-secondary-color)" dy=".3em"></text>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>More</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Social Media</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href=""
+                                class="nav-link p-0 text-muted">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href=""
+                                class="nav-link p-0 text-muted">Linkdin</a></li>
+                        <li class="nav-item mb-2"><a href=""
+                                class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">Twitter</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"
+                                fdprocessedid="x05wtd">
+                            <button class="btn btn-primary" type="button" fdprocessedid="kfma">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+    <p class="text-center text-body-secondary">© 2023 FOOD ! ARC, Inc</p>
+    </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
